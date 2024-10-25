@@ -65,9 +65,7 @@ jobs:
           content_type: text/html
           body:
            Build job of ${{github.repository}} completed successfully!<br><br>
-            
            Download links:<br><br>
-            
            1. APK Artifact:<br>
            <a href='https://github.com/${{github.repository}}/actions/runs/${{run_id}}/artifacts'>Download APK</a><br><br>
           to: aleksandrbasanets2012@gmail.com
