@@ -56,7 +56,7 @@ jobs:
     steps:
       - name: Get artifact URL
         id: url
-        run: echo "artifact_url=https://github.com/Alex20280/GitActionsTest/actions/runs/${GITHUB_RUN_ID}/artifacts" >> $GITHUB_OUTPUT
+        run: echo "artifact_url=https://github.com/Alex20280/GitActionsTest/actions/runs/${GITHUB_RUN_ID}#artifacts" >> $GITHUB_OUTPUT
       - name: Send mail
         uses: juanformoso/action-send-mail@1
         with:
