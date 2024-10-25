@@ -162,6 +162,6 @@ jobs:
             
             3. UI Test Report:<br>
             <a href='https://github.com/${{GitActionsTes}}/actions/runs/${{github.run_id}}/artifacts/${{needs.run-ui-tests.outputs.ui_report_name}}'>Download UI Tests Report</a>
-           <a href='${{steps.workflow_url.outputs.url}}'>Open workflow run</a><br><br>
+            <a href='${{steps.workflow_url.outputs.url}}'>Open workflow run</a><br><br>
           to: aleksandrbasanets2012@gmail.com
           from: bookTrails2024@gmail.com
