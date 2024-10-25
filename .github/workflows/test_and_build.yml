@@ -54,6 +54,9 @@ jobs:
     needs: [build_job]
     runs-on: ubuntu-latest
     steps:
+      - name: Get artifact URL
+        id: url
+        run: echo "artifact_url=https://github.com/Alex20280/GitActionsTest/actions/runs/${GITHUB_RUN_ID}/artifacts" >> $GITHUB_OUTPUT
       - name: Send mail
         uses: juanformoso/action-send-mail@1
         with:
@@ -65,5 +68,7 @@ jobs:
           content_type: text/html
           body:
             <a href='https://github.com/Alex20280/GitActionsTest/actions/runs/$GITHUB_RUN_ID/artifacts/'>Download Artifacts</a><br><br>
+            <a href='${{ steps.url.outputs.artifact_url }}'>Download Artifacts</a><br><br>
+
           to: aleksandrbasanets2012@gmail.com
           from: bookTrails2024@gmail.com
