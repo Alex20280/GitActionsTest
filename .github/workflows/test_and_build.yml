@@ -64,11 +64,19 @@ jobs:
           server_port: 465
           username: ${{secrets.MAIL_USERNAME}}
           password: ${{secrets.MAIL_PASSWORD}}
-          subject: Github Actions job result
+          subject: Github Actions merge result
           content_type: text/html
           body:
-            <a href='https://github.com/Alex20280/GitActionsTest/actions/runs/$GITHUB_RUN_ID/artifacts/'>Download Artifacts</a><br><br>
-            <a href='${{ steps.url.outputs.artifact_url }}'>Download Artifacts</a><br><br>
+            Hello Balancyй Team! 
+            
+            An android developer has just made a new commit to developer branch.
+            
+            A link to the commit can be found here - <a href='${{ github.event.head_commit.url }}'>Check commit</a><br>
+            
+            Get APK file for testing here - <a href='${{ steps.url.outputs.artifact_url }}'>Download APK</a><br><br>
+          
+            Thank you!
 
           to: aleksandrbasanets2012@gmail.com
+          cc: oleksandr.basanets@hnpu.edu.ua
           from: bookTrails2024@gmail.com
