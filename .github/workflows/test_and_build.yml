@@ -150,7 +150,7 @@ jobs:
           subject: Github Actions job result
           content_type: text/html
           body: |
-          Build job of ${{github.repository}} completed successfully!<br><br>
+          Build job of Balancy App completed successfully!<br><br>
           
           Download links:<br><br>
           
