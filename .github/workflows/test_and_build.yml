@@ -67,13 +67,13 @@ jobs:
           subject: Github Actions merge result
           content_type: text/html
           body:
-            Hello Balancyй Team!
+            Hello Balancyй Team! <br/>
             
             An android developer has just made a new commit to developer branch.<br/>
             
-            <br>A link to the commit can be found here - <a href='${{ github.event.head_commit.url }}'>Check commit</a><br/>
+            A link to the commit can be found here - <a href='${{ github.event.head_commit.url }}'>Check commit</a><br/>
             
-            Get APK file for testing here - <a href='${{ steps.url.outputs.artifact_url }}'>Download APK</a><br/>
+            APK file and test reports check here - <a href='${{ steps.url.outputs.artifact_url }}'>Download APK</a><br/>
           
             Thank you!
 
