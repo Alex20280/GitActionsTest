@@ -150,17 +150,6 @@ jobs:
           subject: Github Actions job result
           content_type: text/html
           body: |
-          Build job of Balancy App completed successfully!<br><br>
-          
-          Download links:<br><br>
-          
-          1. APK Artifact:<br>
           <a href="https://github.com/${{github.repository}}/actions/runs/${{github.run_id}}/artifacts/${{ needs.build_job.outputs.artifact_name }}">Download APK</a><br><br>
-          
-          2. Debug Test Report:<br>
-          <a href="https://github.com/${{github.repository}}/actions/runs/${{github.run_id}}/artifacts/${{ needs.run-debug-tests.outputs.debug_report_name }}">Download Debug Tests Report</a><br><br>
-          
-          3. UI Test Report:<br>
-          <a href="https://github.com/${{github.repository}}/actions/runs/${{github.run_id}}/artifacts/${{ needs.run-ui-tests.outputs.ui_report_name }}">Download UI Tests Report</a>
           to: aleksandrbasanets2012@gmail.com
           from: bookTrails2024@gmail.com
