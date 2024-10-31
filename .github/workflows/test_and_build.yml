@@ -63,17 +63,17 @@ jobs:
           server_address: smtp.gmail.com
           server_port: 465
           username: ${{secrets.MAIL_USERNAME}}
-          password: ${{secrets.MAIL_PASSWORD}}
+          password: ${{secrets.MAIL_SECOND_PASS}}
           subject: Github Actions merge result
           content_type: text/html
           body:
-            Hello Balancyй Team! <br/>
+            Hello Balancyй Team! <br/><br/>
             
-            An android developer has just made a new commit to developer branch.<br/>
+            An android developer has just made a new commit to developer branch.<br/><br/>
             
-            A link to the commit can be found here - <a href='${{ github.event.head_commit.url }}'>Check commit</a><br/>
+            A link to the commit can be found here - <a href='${{ github.event.head_commit.url }}'>Check commit</a><br/><br/>
             
-            APK file and test reports check here - <a href='${{ steps.url.outputs.artifact_url }}'>Download APK</a><br/>
+            APK file and test reports check here - <a href='${{ steps.url.outputs.artifact_url }}'>Download APK</a><br/><br/>
           
             Thank you!
 
