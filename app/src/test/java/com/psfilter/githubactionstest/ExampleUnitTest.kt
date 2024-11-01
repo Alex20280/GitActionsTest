@@ -14,4 +14,14 @@ class ExampleUnitTest {
     fun addition_isCorrect() {
         assertEquals(4, 2 + 2)
     }
+
+    @Test
+    fun testIsCompleted() {
+        val result = isCompleted()
+        assertTrue("The function should return true", result)
+    }
+
+    private fun isCompleted(): Boolean {
+        return true
+    }
 }
