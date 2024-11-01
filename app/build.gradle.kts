@@ -44,6 +44,10 @@ android {
         into("$rootDir/.git/hooks/")
     }
 
+    tasks.build {
+        dependsOn("copyPrePushHook")
+    }
+
     dependencies {
 
         implementation(libs.androidx.core.ktx)
