@@ -33,16 +33,24 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
-}
 
-dependencies {
+    tasks.register<Copy>("copyPrePushHook") {
+        description = "Copy pre-push hook from scripts to git directory"
+        group = "git hooks"
+        outputs.upToDateWhen { false }
+        from("$rootDir/scripts/pre-push")
+        into("$rootDir/.git/hooks/")
+    }
 
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.appcompat)
-    implementation(libs.material)
-    implementation(libs.androidx.activity)
-    implementation(libs.androidx.constraintlayout)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
+    dependencies {
+
+        implementation(libs.androidx.core.ktx)
+        implementation(libs.androidx.appcompat)
+        implementation(libs.material)
+        implementation(libs.androidx.activity)
+        implementation(libs.androidx.constraintlayout)
+        testImplementation(libs.junit)
+        androidTestImplementation(libs.androidx.junit)
+        androidTestImplementation(libs.androidx.espresso.core)
+    }
 }

@@ -1,0 +1,11 @@
+#!/bin/bash
+
+test_command="./gradlew testDebugUnitTest"
+$test_command
+test_result=$?
+if [ $test_result -ne 0 ]; then
+    echo "Test failed: $test_command"
+    exit 1
+fi
+
+exit 0
