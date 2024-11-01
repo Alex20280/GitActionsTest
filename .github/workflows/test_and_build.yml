@@ -63,7 +63,7 @@ jobs:
           server_address: smtp.gmail.com
           server_port: 465
           username: ${{secrets.MAIL_USERNAME}}
-          password: ${{secrets.MAIL_SECOND_PASS}}
+          password: ${{secrets.MAIL_PASSWORD}}
           subject: Github Actions merge result
           content_type: text/html
           body:
