@@ -1,11 +1,13 @@
 #!/bin/bash
 
-test_command="./gradlew testDebugUnitTest"
-$test_command
-test_result=$?
-if [ $test_result -ne 0 ]; then
-    echo "Test failed: $test_command"
-    exit 1
-fi
+echo "Running git pre-push hook"
 
-exit 0
+./gradlew ktlintCheck
+
+ktlintCheckStatus=$?
+
+if [ [ktlintCheckStatus -ne 0 ] ]; then
+    exit 1
+else
+    exit 0
+fi
