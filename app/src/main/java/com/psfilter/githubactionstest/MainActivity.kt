@@ -14,6 +14,7 @@ class MainActivity : AppCompatActivity() {
                 override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
+
         setContentView(R.layout.activity_main)
                     Toast.makeText(this, "", Toast.LENGTH_SHORT).show()
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
