@@ -48,6 +48,18 @@ android {
         dependsOn("copyPrePushHook")
     }
 
+    tasks.register("installGitHooks", Exec::class.java) {
+        description = "Installs the pre-push git hooks from /git-hooks."
+        group = "git hooks"
+        workingDir = rootDir
+        commandLine = listOf("chmod")
+        args("-R", "+x", ".git/hooks/")
+        dependsOn("copyPrePushHook")
+        doLast {
+            logger.info("Git hook installed successfully.")
+        }
+    }
+
     dependencies {
 
         implementation(libs.androidx.core.ktx)
