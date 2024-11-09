@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity() {
         Toast.makeText(this, "Made some functionality", Toast.LENGTH_SHORT).show()
         Toast.makeText(this, "Made some functionality for second branch", Toast.LENGTH_SHORT).show()
         Toast.makeText(this, "Made some functionality for 3 branch", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, "Made some functionality for 3 branch", Toast.LENGTH_SHORT).show()
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
