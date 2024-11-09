@@ -1,6 +1,8 @@
-name: Test and Build
+name: Build APK and notify
 on:
   push:
+    branches:
+      - dev
 
 jobs:
   build_job:
@@ -50,7 +52,7 @@ jobs:
           retention-days: 30
 
   notification:
-    name: Notify About Results
+    name: Notify developers and QA
     needs: [build_job]
     runs-on: ubuntu-latest
     steps:
@@ -67,11 +69,11 @@ jobs:
           subject: Github Actions merge result
           content_type: text/html
           body:
-            Hello Balancyй Team! <br/><br/>
+            Hello Balancyй Android and QA Teams! <br/><br/>
             
             An android developer has just made a new commit to developer branch.<br/><br/>
             
-            A link to the commit can be found here - <a href='${{ github.event.head_commit.url }}'>Check commit</a><br/><br/>
+            A link to merged code can be found here - <a href='${{ github.event.head_commit.url }}'>Check commit</a><br/><br/>
             
             APK file and test reports check here - <a href='${{ steps.url.outputs.artifact_url }}'>Download APK</a><br/><br/>
           

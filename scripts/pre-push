@@ -3,3 +3,5 @@
 echo "Running git pre-push hook..." >&2
 
 ./gradlew ktlintCheck --daemon
+
+./gradlew test --daemon
