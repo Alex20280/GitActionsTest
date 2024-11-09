@@ -1,13 +1,14 @@
 name: Build APK and notify
 on:
   push:
-    branches: [dev]
+  pull_request:
+    types: [closed]
 
 jobs:
   build_job:
     name: Building the APK
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
-    if: ${{ success() }}
     steps:
 
       - name: Checkout
