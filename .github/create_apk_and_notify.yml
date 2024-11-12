@@ -1,4 +1,4 @@
-name: Build APK and notify
+name: Build APK and notify after merge to dev
 on:
   push:
   pull_request:
