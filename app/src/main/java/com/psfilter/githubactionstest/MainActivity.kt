@@ -11,9 +11,12 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
+
         setContentView(R.layout.activity_main)
+
         Toast.makeText(this, "", Toast.LENGTH_SHORT).show()
         Toast.makeText(this, "", Toast.LENGTH_SHORT).show()
+
         Toast.makeText(this, "Made some functionality", Toast.LENGTH_SHORT).show()
         Toast.makeText(this, "Made some functionality for second branch", Toast.LENGTH_SHORT).show()
         Toast.makeText(this, "Made some functionality for 3 branch", Toast.LENGTH_SHORT).show()
@@ -29,3 +32,6 @@ class MainActivity : AppCompatActivity() {
         }
     }
 }
+
+
+
